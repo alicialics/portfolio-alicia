@@ -11,16 +11,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 25vh;
+  
 }
 .greeting {
-  font-size: 4.5em;
+  font-size: 6vw;
   font-weight: 450;
   color: #343a40;
 }
 .role {
   color: '#bd5d38';
   text-align: center;
-  font-size: 2.5em;
+  font-size: 3vw;
   font-weight: 450;
 }
+
+

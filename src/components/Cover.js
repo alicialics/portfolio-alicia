@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import { useSpring, useTransition, animated } from 'react-spring'
 import './styles.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { Container, Row } from 'reactstrap'
 
 function useInterval(callback, delay) {
@@ -38,7 +39,7 @@ const Cover = props => {
       height: 0,
       innerHeight: 0,
     },
-    enter: [{ color: '#bd5d38' },{ opacity: 1, height: 80, innerHeight: 80 }],
+    enter: [{ opacity: 1, height: 80, innerHeight: 80 }, { color: '#bd5d38' }],
     leave: [{ innerHeight: 0 }, { opacity: 1 }],
   })
 
@@ -55,19 +56,17 @@ const Cover = props => {
       'Full Stack Software Engineer',
     ]
     setRole(roles[(roles.findIndex(item => item === role) + 1) % roles.length])
-  }, 3000)
+  }, 2000)
 
+  
   return (
     <Container fluid>
-      <div
-        className="cover"
-        style={{ paddingTop: '100px', paddingBottom: '50px' }}
-      >
+      <div className="cover" style={{ paddingTop:'13vh' ,height: '30vh' }}>
         <animated.div className="greeting" style={headerAnimation}>
           Hello, I'm Alicia!
         </animated.div>
       </div>
-      <div className="cover">
+      <div className="cover" style={{ height: '18vh' }}>
         {transitions.map(({ item, props: { innerHeight, ...rest }, key }) => (
           <animated.div key={key} className="role" style={rest}>
             <animated.div style={{ overflow: 'hidden', height: innerHeight }}>
@@ -76,8 +75,18 @@ const Cover = props => {
           </animated.div>
         ))}
       </div>
-      <div className="cover">
-        <FontAwesomeIcon icon="github" color="green" />
+      <div className="cover" style={{ height: '10vh' }}>
+        <a href="https://github.com/zhuoli99" >
+        <FontAwesomeIcon icon={faGithub} size="3x" style={{ margin: '20px' }} color="black"/>
+        </a>
+        <a href="https://linkedin.com/in/alicialics" >
+        <FontAwesomeIcon
+          icon={faLinkedin}
+          size="3x"
+          style={{ margin: '20px' }}
+          color="black"
+        />
+        </a>
       </div>
     </Container>
   )

@@ -4,14 +4,11 @@ import Layout from '../components/Layout'
 import Cover from '../components/Cover'
 import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { library } from '@fortawesome/fontawesome-svg-core'
 
 const Index = ({ data, pageContext }) => {
   const { currentPage } = pageContext
   const isFirstPage = currentPage === 1
-  library.add(faGithub, faLinkedin)
+
   return (
     <Layout>
       {!isFirstPage && (
@@ -21,7 +18,6 @@ const Index = ({ data, pageContext }) => {
       )}
 
       <Cover />
-      <FontAwesomeIcon icon="github" color="green" />
     </Layout>
   )
 }
