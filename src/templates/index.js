@@ -4,21 +4,24 @@ import Layout from '../components/Layout'
 import Cover from '../components/Cover'
 import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core'
 
 const Index = ({ data, pageContext }) => {
   const { currentPage } = pageContext
   const isFirstPage = currentPage === 1
-
+  library.add(faGithub, faLinkedin)
   return (
-    <Layout topStyle="mt-5 pt-2">
+    <Layout>
       {!isFirstPage && (
         <Helmet>
-          <title>{`${config.siteTitle} - Page ${currentPage}`}</title>
+          <title>{config.siteTitle}</title>
         </Helmet>
       )}
 
       <Cover />
+      <FontAwesomeIcon icon="github" color="green" />
     </Layout>
   )
 }

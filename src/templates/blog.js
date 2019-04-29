@@ -6,7 +6,6 @@ import Helmet from 'react-helmet'
 import Pagination from '../components/Pagination'
 import config from '../utils/siteConfig'
 import { Container } from 'reactstrap'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import PageTitle from '../components/PageTitle'
 
 const BlogsPage = ({ data, pageContext }) => {

@@ -58,6 +58,12 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require('sass'),
+      },
+    },
     `gatsby-plugin-catch-links`,
     {
       resolve: 'gatsby-source-contentful',
@@ -83,5 +89,13 @@ module.exports = {
       },
     },
     'gatsby-plugin-netlify',
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-139131088-1',
+        // Puts tracking script in the head instead of the body
+        head: false,
+      },
+    },
   ],
 }

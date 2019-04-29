@@ -8,7 +8,6 @@ import Layout from '../components/Layout'
 import PostSnap from '../components/PostSnap'
 import Pagination from '../components/Pagination'
 import { Container } from 'reactstrap'
-import 'bootstrap/dist/css/bootstrap.min.css'
 
 const TagTemplate = ({ data, pageContext }) => {
   const posts = orderBy(

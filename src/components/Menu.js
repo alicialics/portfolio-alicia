@@ -3,9 +3,16 @@ import { Navbar, NavbarBrand, Nav, NavItem, NavLink, Badge } from 'reactstrap'
 import Octicon, { MarkGithub } from '@githubprimer/octicons-react'
 
 const Menu = () => {
+  
   return (
-    <div className="mb-5">
-      <Navbar dark color="secondary" light expand="lg" className="fixed-top">
+    <div>
+      <Navbar
+        dark
+        style={{ backgroundColor: '#D3846F' }}
+        light
+        expand="xs"
+        className="fixed-top"
+      >
         <NavbarBrand href="/">Home</NavbarBrand>
 
         <Nav className="m-auto" navbar>

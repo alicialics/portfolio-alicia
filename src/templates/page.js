@@ -6,19 +6,18 @@ import Layout from '../components/Layout'
 import { Container } from 'reactstrap'
 import PageTitle from '../components/PageTitle'
 import PageBody from '../components/PageBody'
-import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 const PageTemplate = ({ data }) => {
   const { title, body } = data.contentfulPage
 
   return (
-    <Layout topStyle="mt-5 pt-4">
+    <Layout>
       <Helmet>
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>
 
-      <Container style={{ maxWidth: '50%' }}>
+      <Container>
         <PageTitle>{title}</PageTitle>
         <PageBody body={body} />
       </Container>

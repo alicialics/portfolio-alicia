@@ -8,7 +8,6 @@ import Layout from '../components/Layout'
 import PostSnap from '../components/PostSnap'
 import PageTitle from '../components/PageTitle'
 import { Container } from 'reactstrap'
-import 'bootstrap/dist/css/bootstrap.min.css'
 
 const ProjectPage = ({ data, pageContext }) => {
   const posts = orderBy(
@@ -24,7 +23,7 @@ const ProjectPage = ({ data, pageContext }) => {
   const isFirstPage = currentPage === 1
 
   return (
-    <Layout topStyle="mt-5 pt-4">
+    <Layout>
       {isFirstPage ? (
         <Helmet>
           <title>{`Tag: ${title} - ${config.siteTitle}`}</title>
