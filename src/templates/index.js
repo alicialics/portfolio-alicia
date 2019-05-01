@@ -2,8 +2,13 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Cover from '../components/Cover'
+import Greeting from '../components/Greeting'
+import Roles from '../components/Roles'
+import Icon from '../components/Icon'
 import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
+import styled from 'styled-components'
+import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 
 const Index = ({ data, pageContext }) => {
   const { currentPage } = pageContext
@@ -17,7 +22,11 @@ const Index = ({ data, pageContext }) => {
         </Helmet>
       )}
 
-      <Cover />
+      <Cover className="cover">
+        <Greeting />
+        <Icon />
+        <Roles />
+      </Cover>
     </Layout>
   )
 }

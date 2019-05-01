@@ -1,14 +1,14 @@
 import React from 'react'
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink, Badge } from 'reactstrap'
 import Octicon, { MarkGithub } from '@githubprimer/octicons-react'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 const Menu = () => {
-  
   return (
     <div>
       <Navbar
         dark
-        style={{ backgroundColor: '#D3846F' }}
+        style={{ backgroundColor: 'palevioletred' }}
         light
         expand="xs"
         className="fixed-top"
@@ -30,8 +30,7 @@ const Menu = () => {
           </NavItem>
           <NavItem>
             <NavLink href="https://github.com/zhuoli99">
-              <Octicon icon={MarkGithub} size="small" />
-              <Badge color="secondary">GitHub</Badge>
+              <FontAwesomeIcon icon={faLinkedin} size="1.5x" />
             </NavLink>
           </NavItem>
         </Nav>
