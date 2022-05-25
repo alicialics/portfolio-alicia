@@ -13,7 +13,7 @@ const Cover = ({children,props} )=> {
     <Container fluid>
       {children}
       <div className="cover">
-        <a href="https://github.com/zhuoli99" className="socialicon">
+        <a href="https://github.com/alicialics" className="socialicon">
           <FontAwesomeIcon icon={faGithub} size="3x" />
         </a>
         <a href="https://linkedin.com/in/alicialics" className="socialicon">
